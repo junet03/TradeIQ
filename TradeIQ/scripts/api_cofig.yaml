@@ -1,0 +1,5 @@
+api_key: "YOUR_API_KEY"    # Thay YOUR_API_KEY bằng khóa API
+api_secret: "YOUR_API_SECRET"  # Thay YOUR_API_SECRET bằng khóa bí mật
+base_url: "https://api.binance.com"  # API mặc định ví dụ Binance
+timeout: 30  # Thời gian chờ API (giây)
+log_level: "info"  # Mức ghi log
