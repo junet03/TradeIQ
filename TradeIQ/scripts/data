@@ -1,1 +1,23 @@
-đang cập nhật
+import requests
+import json
+
+# URL API từ Binance
+API_URL = "https://api.binance.com/api/v3/ticker/price"
+
+# Hàm lấy dữ liệu giá
+def fetch_data(symbol):
+    response = requests.get(f"{API_URL}?symbol={symbol}")
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        return None
+
+# Ví dụ: Lấy giá của cặp DOGEUSDT
+if __name__ == "__main__":
+    symbol = "DOGEUSDT"
+    data = fetch_data(symbol)
+    if data:
+        print(f"Giá của {symbol}: {data['price']} USDT")
+    else:
+        print("Không thể lấy dữ liệu!")
